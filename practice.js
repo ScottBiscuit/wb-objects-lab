@@ -14,7 +14,11 @@
   Then alert your name using dot notation.
 */
 
-//Code here
+const me = {
+  name: 'scott',
+  age: 41
+};
+alert(me.name);
 
 /// ////////////// PROBLEM 2 ///////////////////
 
@@ -23,21 +27,30 @@
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+const favoriteThings = {
+  band: 'staind',
+  food: 'pizza',
+  person: 'myWife',
+  book: 'theNameOfTheWindByPatrickRothfuss',
+  movie: 'elf',
+  history: 'christmas'
+};
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
   and then another key named 'brand' with the value being your favorite brand.
 */
 
-//Code here
+favoriteThings.car = 'subaruImprezaWrxSti';
+favoriteThings.brand = 'pusheen'
 
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
-//Code here
+favoriteThings.food = 'Chicken Nuggets';
+favoriteThings.book = 'Harry Potter'
 
 /// ////////////// PROBLEM 3 ///////////////////
 
@@ -58,7 +71,8 @@ const user2 = {
   Make that change without editing the code above.
 */
 
-//Code Here
+user2.name = 'Bryan G. Smith';
+user2.email = 'bryan.smith@devmounta.in';
 
 /// ////////////// PROBLEM 4 ///////////////////
 
@@ -69,7 +83,10 @@ let shoppingCart = {};
   It should add a new key-value pair to the cart with the item and quantity.
 */
 
-//Code Here
+function addToCart(item, quantity){
+  shoppingCart.item = item;
+  shoppingCart.quantity = quantity;
+}
 
 /// ////////////// PROBLEM 5 ///////////////////
 
@@ -79,7 +96,14 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10(object){
+  for (let key in object){
+    if (object[key] > 10){
+      object[key] = 0;
+    }
+  }
+  return object;
+}
 
 /// ////////////// PROBLEM 6 ///////////////////
 
@@ -89,7 +113,12 @@ let shoppingCart = {};
   Return the updated object.
 */
 
-//Code Here
+function double(object){
+  for (let key in object){
+    object[key] = (object[key] * 2);
+  }
+  return object
+}
 
 /// ////////////// PROBLEM 7 ///////////////////
 
