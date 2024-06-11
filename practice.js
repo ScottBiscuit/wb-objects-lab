@@ -332,8 +332,8 @@ const cat = {
 */
 
 //Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name;
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -371,7 +371,11 @@ const myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner() {
+  for (const accident of myCar.accidents) {
+    accident.atFaultForAccident = false;
+  }
+}
 
 /// ////////////// PROBLEM 18 ///////////////////
 
@@ -389,7 +393,10 @@ const myCar = {
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+function largeNumbers( {first, second, third} ) {
+  
+  return Math.min(first, second, third)
+}
 
 /// ////////////// PROBLEM 19 ///////////////////
 
@@ -399,4 +406,15 @@ const myCar = {
   Find the longest array and return that array.
 */
 
-//Code Here
+function numberGroups({ a, b, c }) {
+  if (a.length > b.length) {
+    return a.length > c.length ? a : c;
+    // This is called a ternary operator. It's a shorthand way of saying:
+    // if (a.length > c.length) {
+    //    return a
+    // } else {
+    //    return c
+    // }
+  }
+  return b.length > c.length ? b : c;
+}
