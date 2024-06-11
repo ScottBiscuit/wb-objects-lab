@@ -33,7 +33,7 @@ const favoriteThings = {
   person: 'myWife',
   book: 'theNameOfTheWindByPatrickRothfuss',
   movie: 'elf',
-  history: 'christmas'
+  holiday: 'christmas'
 };
 
 /*
@@ -84,8 +84,8 @@ let shoppingCart = {};
 */
 
 function addToCart(item, quantity){
-  shoppingCart.item = item;
-  shoppingCart.quantity = quantity;
+  shoppingCart[item] = quantity;
+
 }
 
 /// ////////////// PROBLEM 5 ///////////////////
@@ -205,7 +205,9 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-for (const [carKeys, carValues] of Object.entries(carDetails))
+for (const [carKeys, carValues] of Object.entries(carDetails)) {
+
+}
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -216,7 +218,7 @@ for (const [carKeys, carValues] of Object.entries(carDetails))
 */
 
 function greeting(obj) {
-  //Code Here
+  const {firstName, lastName, title} = obj
 
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -233,7 +235,9 @@ function greeting(obj) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  
+}
 
 /// ////////////// PROBLEM 14 ///////////////////
 
