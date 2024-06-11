@@ -205,9 +205,7 @@ const carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables.
 */
 
-for (const [carKeys, carValues] of Object.entries(carDetails)) {
-
-}
+const {color, make, model, year} = carDetails;
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -236,7 +234,8 @@ function greeting(obj) {
 */
 
 function totalPopulation(obj){
-  
+  const {utah, california, texas, arizona} = obj;
+  return utah + california + texas + arizona
 }
 
 /// ////////////// PROBLEM 14 ///////////////////
@@ -249,7 +248,10 @@ function totalPopulation(obj){
   Return false otherwise.
 */
 
-//Code Here
+function usCanadaBorder(latLongCoords) {
+  const [latitude, longitude] = latLongCoords;
+  return latitude === 49 && longitude >= -123 && longitude <= -95;
+}
 
 /// ////////////// PROBLEM 15 ///////////////////
 
@@ -295,7 +297,15 @@ const employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater() {
+  const newEmps = employees.filter((emp) => emp.firstName !== 'Theo');
+  for (const employee of newEmps){
+    if (employee.firstName === 'Lorie'){
+      employee.department = 'HR'
+    }
+  }
+  return newEmps
+}
 
 /// ////////////// PROBLEM 16 ///////////////////
 
